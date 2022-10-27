@@ -229,3 +229,9 @@ h1 {
     margin: 1rem;
   }
 }
+
+.logo{
+  max-height: 250px;
+  width: 960px;
+  }
+

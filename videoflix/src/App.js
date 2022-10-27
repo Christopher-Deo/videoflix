@@ -3,13 +3,14 @@ import { useState, useEffect } from "react";
 import './app.css';
 import SearchIcon from './search.svg';
 import MovieCard from "./MovieCard";
+import Header from "./header";
 
 
 //API key: aa76bd6b
  
 //static variable to hold the api url & key
 const API_URL = 'http://www.omdbapi.com/?i=tt3896198&apikey=aa76bd6b'
-// eslint-disable-next-line
+
 const movie1 = {
     Title: 'Spiderman in Cannes', 
     Year: '2016', 
@@ -30,12 +31,13 @@ const App = () => {
 
     }
     useEffect(() =>{
-        searchMovies('Spiderman')
+        searchMovies('Batman')
     }, []);
     return(
         <div className="app">
-            <img 
-            src="./vidflix logo.png"/>
+            <div>
+                <Header/>
+            </div>
         <div className="search">
             <input 
                placeholder="Search for Movies"
